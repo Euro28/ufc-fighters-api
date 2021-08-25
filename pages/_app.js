@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Navbar from "../components/Navbar";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>MMA API</title>
+      </Head>
+      <Navbar />
+      <Component {...pageProps} />;
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

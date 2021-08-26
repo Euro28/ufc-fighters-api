@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import fightModel from "./fight.js";
+import pg from 'pg'
 
 /*hacky stuff to get dotenv to work*/
 const __filename = fileURLToPath(import.meta.url);

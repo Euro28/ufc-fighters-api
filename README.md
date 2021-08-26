@@ -1,6 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
 ## Getting Started
+
+1. set .env for URI of postgres database 
+2. submudle init and update and yarn install 
+3. yarn install main repo
+4. yarn dev
 
 First, run the development server:
 

@@ -1,0 +1,3 @@
+[submodule "mma-api"]
+	path = mma-api
+	url = https://github.com/woog2roid/mma-api

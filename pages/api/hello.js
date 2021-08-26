@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import db from "../../db/models/index.js";
 import Sequelize from "sequelize";
-import mma from '../../../mma-api/lib/mma/index.js'
+import mma from '../../mma-api/lib/mma/index.js'
 
 //const { Op } = Sequelize;
 //db.sequelize.sync();

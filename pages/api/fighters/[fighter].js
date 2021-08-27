@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import db from "../../../db/models/index.js";
 import Sequelize from "sequelize";
-import mma from "../../../mma-api/lib/mma/index.js";
 
 export default async function handler(req, res) {
   let { fighter } = req.query;
@@ -27,8 +26,5 @@ export default async function handler(req, res) {
     },
   });
 
-  mma.fighter(fighter, (data) => {
-    data.fights = fights;
-    res.status(200).json(data);
-  });
+  res.status(200).json(fights);
 }

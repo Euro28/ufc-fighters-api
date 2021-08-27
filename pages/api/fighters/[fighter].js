@@ -3,7 +3,7 @@
 //import Sequelize from "sequelize";
 
 export default async function handler(req, res) {
-  //let { fighter } = req.query;
+  let { fighter } = req.query;
   //const { Op } = Sequelize;
   //const Fight = db.fights;
 
@@ -27,5 +27,5 @@ export default async function handler(req, res) {
   //});
 
   //res.status(200).json(fights);
-  res.status(200).json({ testData: "testing new" });
+  res.status(200).json({ nameGiven: fighter });
 }

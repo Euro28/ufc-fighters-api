@@ -41,20 +41,14 @@ export default function Home() {
       </div>
       <Heading as="h3"> Try it Now</Heading>
       <InputGroup>
-        <InputLeftAddon children="website/api/fighters" />
+        <InputLeftAddon>website/api/fighters</InputLeftAddon>
         <Input placeholder=" Jon Jones" variant="filled" maxWidth="550" />
         <InputRightAddon>
           <button>request button</button>
         </InputRightAddon>
       </InputGroup>
       <div style={well}>
-        <pre style={scrollable}>
-          "name": "Luke Skywalker", "height": "172", "mass": "77", "hair_color":
-          "blond", "skin_color": "fair", "eye_color": "blue", "birth_year":
-          "19BBY", "gender": "male", "homeworld":
-          "https://swapi.dev/api/planets/1/", "films": [
-          "https://swapi.dev/api/films/2/", "https://swapi.dev/api/films
-        </pre>
+        <pre style={scrollable}>test text to go in scrollabnle</pre>
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ datasource db {
 
 model fights {
   id             Int      @id @default(autoincrement())
-  red_fighter    String   @db.VarChar(100)
-  blue_fighter   String   @db.VarChar(100)
+  redFighter    String   @db.VarChar(100) @map("red_fighter")
+  blueFighter   String   @db.VarChar(100) @map("blue_fighter")
   red_odds       Int      @db.SmallInt
   blue_odds      Int      @db.SmallInt
   fight_day      DateTime @db.Date

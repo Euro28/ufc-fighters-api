@@ -7,13 +7,13 @@ export default async function handler(req, res) {
     where: {
       OR: [
         {
-          red_fighter: {
+          redFighter: {
             equals: fighter,
             mode: "insensitive",
           },
         },
         {
-          blue_fighter: {
+          redFighter: {
             equals: fighter,
             mode: "insensitive",
           },

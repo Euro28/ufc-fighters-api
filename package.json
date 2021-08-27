@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": " npm install && cd mma-api && git submodule init && git submodule update && npm install && cd .. && next build",
+		"build": " npm install -g pg && npm install && cd mma-api && git submodule init && git submodule update && npm install && cd .. && next build",
 		"start": "next start",
 		"lint": "next lint"
 	},

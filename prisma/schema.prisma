@@ -9,19 +9,19 @@ datasource db {
 
 model fights {
   id             Int      @id @default(autoincrement())
-  red_fighter    String   @db.VarChar(100) 
-  blue_fighter   String   @db.VarChar(100) 
-  red_odds       Int      @db.SmallInt 
-  blue_odds      Int      @db.SmallInt 
-  fight_day      DateTime @db.Date 
-  fight_location String   
+  red_fighter    String   @db.VarChar(100)
+  blue_fighter   String   @db.VarChar(100)
+  red_odds       Int      @db.SmallInt
+  blue_odds      Int      @db.SmallInt
+  fight_day      DateTime @db.Date
+  fight_location String
   country        String   @db.VarChar(50)
   winner         String   @db.VarChar(4)
-  title_bout     Boolean  @map("title_bout")
-  weight_class   String   @db.VarChar(50) 
-  no_of_rounds   Int      @db.SmallInt 
-  red_age        Int      @db.SmallInt 
-  blue_age       Int      @db.SmallInt 
-  better_rank    String   @db.VarChar(7) 
+  title_bout     Boolean
+  weight_class   String   @db.VarChar(50)
+  no_of_rounds   Int      @db.SmallInt
+  red_age        Int      @db.SmallInt
+  blue_age       Int      @db.SmallInt
+  better_rank    String   @db.VarChar(7)
   finish         String?  @db.VarChar(10)
 }

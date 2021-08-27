@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model fights {
+  id             Int      @id @default(autoincrement())
+  redFighter     String   @db.VarChar(100) @map("red_fighter")
+  blueFighter    String   @db.VarChar(100) @map("blue_fighter")
+  redOdds        Int      @db.SmallInt @map("red_odds")
+  blueOdds       Int      @db.SmallInt @map("blue_odds")
+  fightDay       DateTime @db.Date @map("fight_day")
+  fightLocation  String @map("fight_location")
+  country        String   @db.VarChar(50)
+  winner         String   @db.VarChar(4)
+  titleBout      Boolean @map("title_bout")
+  weightClass    String   @db.VarChar(50) @map("weight_class")
+  noOfRounds     Int      @db.SmallInt @map("no_of_rounds")
+  redAge         Int      @db.SmallInt @map("red_age")
+  blueAge        Int      @db.SmallInt @map("blue_age")
+  betterRank     String   @db.VarChar(7) @map("better_rank")
+  finish         String?  @db.VarChar(10)
+}

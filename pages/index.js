@@ -1,55 +1,110 @@
-import {
-  Heading,
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
-} from "@chakra-ui/react";
-export default function Home() {
-  const well = {
-    "min-height": "50px",
-    padding: "19px",
-    "background-color": "#1c1e22",
-    "margin-bottom": "20px",
-    border: "1px solid",
-    "border-radius": "4px",
-    "box-shadow": "inset 0 1px 1px rgb(0 0 0 / 5%)",
-  };
+import { Heading } from "@chakra-ui/react";
+import styles from "../styles/styles.js";
+import RequestMaker from "../components/requestMaker";
+import Navbar from "../components/navbar.js";
 
-  const scrollable = {
-    "max-height": "340",
-    "overflow-y": "scroll",
-    color: "white",
-  };
+export default function Home() {
   return (
-    <div>
-      The below is an MMA API which is a restful data collection, which collates
-      fight statistics.
-      <Heading as="h2">why make this?</Heading>
-      <div
-        style={{
-          marginLeft: "-15px",
-          marginRight: "-15px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ backgroundColor: "#1c1e22", marginBottom: "30px" }}>
-          <Heading as="h1" color="whiteAlpha.900">
-            MMA API
-          </Heading>
+    //<div>
+    //<div style={styles.centerRow}>
+    //<div style={styles.jumbotron}>
+    //<Heading as="h1" color="whiteAlpha.900">
+    //MMA API
+    //</Heading>
+    //</div>
+    //</div>
+    <>
+      <body>
+        <div>
+          <Navbar />
+          <div
+            style={{
+              display: "block",
+              marginRight: "-15px",
+              marginLeft: "-15px",
+              boxSizing: "border-box",
+            }}
+          >
+            <div
+              style={{
+                width: "16.66666667%",
+                float: "left",
+                position: "relative",
+                minHeight: "1px",
+                paddingRight: "15px",
+                paddingLeft: "15px",
+                boxSizing: "border-box",
+                display: "block",
+              }}
+            ></div>
+            <div
+              style={{
+                backgroundColor: "red",
+                boxShadow: "10px 10px 5px rgb(70 70 70)",
+                width: "66.666667%",
+                float: "left",
+                position: "relative",
+                minHeight: "1px",
+                paddingRight: "15px",
+                paddingLeft: "15px",
+                display: "block",
+                boxSizing: "border-box",
+              }}
+            >
+              <div style={{ paddingTop: "10px" }}>
+                <p>
+                  The format should be from mma api with a main content section,
+                  the sections should include why make it, how does it work, and
+                  give an example request maker, include copyright section
+                </p>
+              </div>
+              <hr
+                style={{
+                  marginTop: "23px",
+                  marginBottom: "20px",
+                  height: "1px",
+                  backgroundColor: "#3f3f3f",
+                  border: 0,
+                  boxSizing: "content-box",
+                  display: "block",
+                  marginBlockStart: "0.5em",
+                  marginBlockEnd: "0.5em",
+                  marginInlineStart: "auto",
+                  marginInlineEnd: "auto",
+                  //borderTop: "1px solid #eee",
+                }}
+              />
+              <div>
+                <Heading as="h3"> Why make this ?</Heading>
+                <p> this is some text</p>
+                <p> this is some more text</p>
+              </div>
+              <hr
+                style={{
+                  marginTop: "23px",
+                  marginBottom: "20px",
+                  height: "1px",
+                  backgroundColor: "#3f3f3f",
+                  border: 0,
+                  boxSizing: "content-box",
+                  display: "block",
+                  marginBlockStart: "0.5em",
+                  marginBlockEnd: "0.5em",
+                  marginInlineStart: "auto",
+                  marginInlineEnd: "auto",
+                  //borderTop: "1px solid #eee",
+                }}
+              />
+              <div>
+                <Heading as="h3"> CopyRight</Heading>
+                <p> Makes use of a kaggle dataset for fight information,
+                also webscrapes sherdog for fighter information</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <Heading as="h3"> Try it Now</Heading>
-      <InputGroup>
-        <InputLeftAddon>website/api/fighters</InputLeftAddon>
-        <Input placeholder=" Jon Jones" variant="filled" maxWidth="550" />
-        <InputRightAddon>
-          <button>request button</button>
-        </InputRightAddon>
-      </InputGroup>
-      <div style={well}>
-        <pre style={scrollable}>test text to go in scrollabnle</pre>
-      </div>
-    </div>
+      </body>
+    </>
+    //</div>
   );
 }

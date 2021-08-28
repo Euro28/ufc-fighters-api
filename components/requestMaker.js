@@ -6,45 +6,61 @@ import {
   InputRightAddon,
   Button,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import initial from "../public/initialFighter.json";
 
 export default function RequestMaker() {
   const [query, setQuery] = useState("");
   const [queryResult, setQueryResult] = useState();
+
+  useEffect(() => {
+    setQueryResult(initial);
+  }, []);
 
   const requestFighter = async (e, name) => {
     e.preventDefault();
 
     const fighterData = await fetch(`/api/fighters/${name}`);
     let data = await fighterData.json();
-    data.fights = data.fights.slice(0, 3);
+    if (!data.message) {
+      data.fights = data.fights.slice(0, 1);
+    }
 
     setQueryResult(data);
   };
 
   return (
     <div>
-      <Heading as="h3"> Try it Now</Heading>
       <form onSubmit={(e) => requestFighter(e, query)}>
         <InputGroup>
-          <InputLeftAddon>website/api/fighters</InputLeftAddon>
+          <InputLeftAddon borderColor="grey">
+            website/api/fighters
+          </InputLeftAddon>
           <Input
+            border="1px"
+            borderColor="grey"
             placeholder=" Jon Jones"
             variant="filled"
             maxWidth="550"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <InputRightAddon>
-            <Button variant="solid" colorScheme="blackAlpha" type="submit">
-              Request
-            </Button>
-          </InputRightAddon>
+          <Button
+            variant="solid"
+            colorScheme="blackAlpha"
+            type="submit"
+            position="relative"
+            left="10px"
+          >
+            Request
+          </Button>
         </InputGroup>
       </form>
       <div>
-        <pre style={{ maxHeight: "340px", overflowY: "scroll" }}>
-          {JSON.stringify(queryResult, null, 2)}
+        <pre
+          style={{ maxHeight: "340px", overflowY: "scroll", fontSize: "11px" }}
+        >
+          {JSON.stringify(queryResult, null, 8)}
         </pre>
       </div>
     </div>

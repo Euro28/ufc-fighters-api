@@ -6,10 +6,13 @@ function Navbar() {
     <>
       <Breadcrumb
         separator=" | "
-        background="gray.500"
+        background="#222"
+        borderColor="#080808"
         height="32pt"
         textAlign="right"
         paddingRight="4"
+        color="#847C6F"
+        fontFamily="Tahoma, serif"
       >
         <BreadcrumbItem height="32pt">
           <Link href="/">

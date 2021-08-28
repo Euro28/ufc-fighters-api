@@ -1,0 +1,44 @@
+{
+	"name": "Jon Jones",
+	"nickname": "Bones",
+	"association": "Jackson-Wink MMA",
+	"age": "34",
+	"birthday": "1987-07-19",
+	"nationality": "United States",
+	"height": "6'4\"",
+	"weight": "205 lbs",
+	"weight_class": "Light Heavyweight",
+	"wins": {
+		"total": 26,
+		"knockouts": 10,
+		"submissions": 6,
+		"decisions": 10,
+		"others": 0
+	},
+	"losses": {
+		"total": 1,
+		"knockouts": 0,
+		"submissions": 0,
+		"decisions": 0,
+		"others": 0
+	},
+	"fights": [
+		{
+			"id": 741,
+			"redFighter": "Jon Jones",
+			"blueFighter": "Thiago Santos",
+			"red_odds": -670,
+			"blue_odds": 485,
+			"fight_day": "2019-07-06T00:00:00.000Z",
+			"fight_location": "Las Vegas, Nevada, USA",
+			"country": " USA",
+			"winner": "Red",
+			"title_bout": true,
+			"weight_class": "Light Heavyweight",
+			"no_of_rounds": 5,
+			"red_age": 31,
+			"blue_age": 35,
+			"better_rank": "Red",
+			"finish": "S-DEC"
+		}	]
+}

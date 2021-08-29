@@ -32,7 +32,7 @@ export default function RequestMaker() {
   return (
     <div>
       <form onSubmit={(e) => requestFighter(e, query)}>
-        <InputGroup>
+        <InputGroup marginRight="auto" marginLeft="auto" width="900px">
           <InputLeftAddon borderColor="grey">
             website/api/fighters
           </InputLeftAddon>
@@ -58,7 +58,18 @@ export default function RequestMaker() {
       </form>
       <div>
         <pre
-          style={{ maxHeight: "340px", overflowY: "scroll", fontSize: "11px" }}
+          style={{
+            padding: "14px",
+            marginRight: "auto",
+            marginLeft: "auto",
+            marginTop: "10px",
+            maxHeight: "340px",
+            overflowY: "scroll",
+            fontSize: "11px",
+            border: "2px solid grey",
+            backgroundColor: "white",
+            width: "900px",
+          }}
         >
           {JSON.stringify(queryResult, null, 8)}
         </pre>

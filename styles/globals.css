@@ -14,3 +14,24 @@
 /** {*/
 /*box-sizing: border-box;*/
 /*}*/
+
+code {
+	color: red;
+}
+
+li {
+	font-size: 90%;
+}
+
+pre {
+	padding: 14px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+	max-height: 340px;
+	overflow-y: scroll;
+	font-size: 11px;
+	border: 2px solid grey;
+	background-color: white;
+	width: 900px
+}

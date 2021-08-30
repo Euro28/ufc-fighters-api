@@ -18,7 +18,7 @@ export default async function handler(req, res) {
               },
             },
             {
-              redFighter: {
+              blueFighter: {
                 equals: data.name,
                 mode: "insensitive",
               },

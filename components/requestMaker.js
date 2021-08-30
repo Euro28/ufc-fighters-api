@@ -32,16 +32,21 @@ export default function RequestMaker() {
   return (
     <div>
       <form onSubmit={(e) => requestFighter(e, query)}>
-        <InputGroup marginRight="auto" marginLeft="auto" width="900px">
+        <InputGroup
+          marginRight="auto"
+          marginLeft="auto"
+          width="900px"
+          marginTop="8"
+        >
           <InputLeftAddon borderColor="grey">
-            website/api/fighters
+            https://ufc-fighters-api.vercel.app/api/fighters/
           </InputLeftAddon>
           <Input
             border="1px"
             borderColor="grey"
             placeholder=" Jon Jones"
             variant="filled"
-            maxWidth="550"
+            maxWidth="500"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -57,12 +62,23 @@ export default function RequestMaker() {
         </InputGroup>
       </form>
       <div>
+        <Heading
+          as="h3"
+          size="md"
+          marginRight="auto"
+          marginLeft="auto"
+          position="relative"
+          left="110px"
+          top="20px"
+        >
+          Result:
+        </Heading>
         <pre
           style={{
             padding: "14px",
             marginRight: "auto",
             marginLeft: "auto",
-            marginTop: "10px",
+            marginTop: "40px",
             maxHeight: "340px",
             overflowY: "scroll",
             fontSize: "11px",
